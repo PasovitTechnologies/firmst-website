@@ -5,8 +5,8 @@ const router = express.Router();
 
 // Dummy admin credentials (plaintext for now)
 const adminCredentials = [
-  { email: "admin1@example.com", password: "password123" },
-  { email: "admin2@example.com", password: "adminpassword" }
+  { email: "studyabroad@firmst.tech", password: "qKbYUp7%Bc" },
+  { email: "tech.admin@eafo.info", password: "79m@3Zw50[%FF0" }
 ];
 
 // Secret key for JWT
