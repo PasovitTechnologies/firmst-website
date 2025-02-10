@@ -1,0 +1,228 @@
+/* General Navbar Styles */
+.navbar {
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hide Navbar on Scroll */
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+/* Show Navbar on Stop/Scroll Up */
+.navbar.visible {
+    transform: translateY(0);
+}
+
+/* Container for navbar */
+.navbar .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    width: 120px;
+}
+
+/* Centering Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #00295f;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-links li a:hover {
+    color: #a84327;
+}
+
+/* Actions Section (Contact & Language Dropdown) */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+/* Contact Button */
+.contact-btn {
+    background: #00295f;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds space between icon and text */
+}
+
+/* Phone Icon */
+.phone-icon {
+    color: white;
+    font-size: 16px;
+}
+
+
+/* Contact Button */
+.contact-btn {
+    background: #00295f;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Custom Dropdown */
+/* Custom Dropdown */
+/* Custom Dropdown */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-dropdown select {
+    padding: 8px 30px 8px 12px;  /* Right padding increased for spacing */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    appearance: none;
+
+    /* Remove default arrow */
+    background-image: none;
+}
+
+/* Custom Arrow */
+.custom-dropdown::after {
+    content: "";
+    position: absolute;
+    right: 10px; /* Adjusted for spacing */
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #00295f;  /* Dark Blue */
+    border-bottom: 2px solid #00295f;
+    pointer-events: none;
+}
+
+/* Hover & Focus Effects */
+.custom-dropdown select:hover,
+.custom-dropdown select:focus {
+    border-color: #00295f;
+}
+
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .menu-line {
+        width: 100%;
+        height: 3px;
+        background: #00295f;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-toggle.open .menu-line:nth-child(1) {
+        transform: rotate(45deg) translateX(2px) translateY(6px);
+        background: white;
+    }
+
+    .menu-toggle.open .menu-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open .menu-line:nth-child(3) {
+        transform: rotate(-45deg) translateX(2px) translateY(-6px);
+        background: white;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -75%;
+        width: 75%;
+        height: 100vh;
+        background: #00295f;
+        box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        transition: right 0.4s ease-in-out;
+    }
+
+    .nav-links.open {
+        right: 0;
+        background: #00295f;
+        z-index: 100;
+    }
+
+    .nav-links.open li a {
+        color: white;
+    }
+
+    .nav-links.open li a:hover {
+        color: #a84327;
+    }
+
+    .actions {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .custom-dropdown select {
+        width: 100px;
+    }
+}
+
+/* Ensure Desktop Actions Stay Visible */
+@media (min-width: 769px) {
+    .desktop-actions {
+        display: flex;
+    }
+}
