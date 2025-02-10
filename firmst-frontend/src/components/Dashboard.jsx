@@ -10,6 +10,7 @@ const Dashboard = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("All");
   const navigate = useNavigate();
+  const baseURL = import.meta.env.VITE_BASE_URL;
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -19,7 +20,7 @@ const Dashboard = () => {
       return;
     }
 
-    fetch("http://localhost:5000/api/firmst-form/user-data", {
+    fetch(`${baseURL}/api/firmst-form/user-data`, {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${token}`,

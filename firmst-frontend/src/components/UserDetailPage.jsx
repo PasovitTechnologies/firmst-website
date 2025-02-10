@@ -14,6 +14,7 @@ const UserDetailPage = () => {
   const [notes, setNotes] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [editedDetails, setEditedDetails] = useState({});
+  const baseURL = import.meta.env.VITE_BASE_URL;
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -23,7 +24,7 @@ const UserDetailPage = () => {
       return;
     }
 
-    fetch(`http://localhost:5000/api/firmst-form/user-detail/${userEmail}`, {
+    fetch(`${baseURL}/api/firmst-form/user-detail/${userEmail}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -50,7 +51,7 @@ const UserDetailPage = () => {
   const saveChanges = () => {
     const token = localStorage.getItem("token");
 
-    fetch(`http://localhost:5000/api/firmst-form/user-detail/${userEmail}`, {
+    fetch(`${baseURL}/api/firmst-form/user-detail/${userEmail}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -81,7 +82,7 @@ const UserDetailPage = () => {
   const deleteUser = () => {
     const token = localStorage.getItem("token");
   
-    fetch(`http://localhost:5000/api/firmst-form/user-detail/${userEmail}`, {
+    fetch(`${baseURL}/api/firmst-form/user-detail/${userEmail}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     })
