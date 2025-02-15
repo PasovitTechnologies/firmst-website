@@ -20,11 +20,10 @@
   }
   /* Process Container */
   .process-container {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    background-color: red; */
   }
   
   /* Columns */
@@ -41,20 +40,34 @@
     display: flex;
     align-items: center;
     background: white;
+    width: 100%;  /* Take full width */
+    max-width: 300px; /* Restrict max width */
+    height: 150px;
     padding: 20px;
     border-radius: 12px;
+    color: #00295F;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
   }
   
   .process-card:hover {
     transform: translateY(-5px);
-    background-color: #d45e33;
+    background-color: #00FF95;
     cursor: pointer;
   }
-  .process-card:hover .step-content p{
-    color: white;
+  
+  /* Mobile Fix */
+  @media (max-width: 1024px) {
+    .process-card {
+      max-width: 100%; /* Allow it to take full width */
+    }
+  
+    .flex {
+      flex-direction: column; /* Stack on top of each other */
+      align-items: center; /* Center align */
+    }
   }
+  
   /* Step Number */
   .step-number {
     width: 50px;
