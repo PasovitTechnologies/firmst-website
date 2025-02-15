@@ -11,7 +11,7 @@ const Programs = () => {
   return (
     <section className="p-5 lg:p-10" >
     <div className="mb-10 flex items-center justify-center">
-    <h2 className="text-4xl text-[#00295F] font-bold lg:text-center w-[650px]">
+    <h2 className="text-3xl text-[#00295F] font-bold lg:text-center lg:w-[650px]">
     {t("programs.heading").split(" ").slice(0, 4).join(" ")}{" "}
     <span className="text-orange-500">
       {t("programs.heading").split(" ").slice(4).join(" ")}

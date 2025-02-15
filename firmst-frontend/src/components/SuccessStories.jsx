@@ -113,10 +113,10 @@ const SuccessStories = () => {
           </h2>
 
           {/* First Card */}
-          <div className="bg-[rgb(201,188,253)] w-[260px] h-[200px] rounded-r-[150px] flex items-center gap-3">
-            <img src={arrow} alt="" className="h-[30px]" />
-            <div>
-              <h1 className="text-4xl my-1 font-bold">15+ Years</h1>
+          <div className="bg-[rgb(201,188,253)] w-[260px] h-[180px] rounded-r-[150px] relative">
+            <img src={arrow} alt="" className=" h-[25px]  absolute top-16 left-0" />
+            <div className="h-full flex flex-col justify-center ml-10">
+              <h1 className="text-4xl my-1 w-full px-4 font-bold">15+ Years</h1>
               <p className="w-44 font-semibold text-xs">
                 Medical interns have been sent abroad and trained by renowned medical experts
               </p>
@@ -124,10 +124,10 @@ const SuccessStories = () => {
           </div>
 
           {/* Second Card */}
-          <div className="bg-[#B6EEFE] w-[320px] h-[200px] rounded-r-[150px] flex items-center gap-3">
-            <img src={star} alt="" className="h-[50px]" />
-            <div>
-              <h1 className="text-4xl my-1 font-bold">100+</h1>
+          <div className="bg-[#B6EEFE] w-[320px] h-[180px] rounded-r-[150px] relative">
+            <img src={star} alt="" className="h-[50px] absolute top-14 left-[-20px] rotate-90" />
+            <div className="h-full flex flex-col justify-center">
+              <h1 className="text-4xl my-1  w-[70%] px-5 font-bold">100+</h1>
               <p className="w-44 font-semibold text-xs">
                 Medical interns have been sent abroad and trained by renowned medical experts
               </p>
@@ -135,10 +135,10 @@ const SuccessStories = () => {
           </div>
 
           {/* Third Card */}
-          <div className="bg-[#FED5B0] w-[360px] h-[200px] rounded-r-[150px] flex items-center gap-3">
-            <img src={successPerson} alt="" className="h-[220px] mb-4" />
-            <div>
-              <h1 className="text-4xl my-1 font-bold">100%</h1>
+          <div className="bg-[#FED5B0] w-[360px] h-[200px] rounded-r-[150px] relative">
+            <img src={successPerson} alt="" className="h-[180px] absolute top-5 left-0 mb-4" />
+            <div className="h-full flex flex-col justify-center ml-24">
+              <h1 className="text-4xl my-1 font-bold  w-full px-8">100%</h1>
               <p className="w-44 text-xs font-semibold">
                 Fast and guaranteed visa application services
               </p>

@@ -22,11 +22,11 @@
 
   "requestForm": {
     "heading": "Submit the request form to receive complimentary consultation now",
-    "description": "Fill out the form below and we’ll get back to you as soon as possible.",
-    "name": "Name",
-    "contact": "Contact Number",
-    "specialization": "Specialization of Interest",
-    "email": "Email",
+    "description": "Submit the request form to receive complimentary consultation now",
+    "name": "Name *",
+    "contact": "Contact Number *",
+    "specialization": "Specialization of Interest *",
+    "email": "Email *",
     "accept_terms": "I accept the",
     "terms_conditions": "terms and conditions",
     "submit": "Submit",
