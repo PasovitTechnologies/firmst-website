@@ -18,13 +18,13 @@ const HeroSection = () => {
   const { t } = useTranslation(); // Initialize translation hook
 
   return (
-    <div className="mt-16 lg:mt-20 min-h-[80vh] w-full overflow-x-hidden">
+    <div className="mt-16 lg:mt-20 min-h-[80vh] w-full overflow-x-hidden text-[#00295F]">
       <div className="container mx-auto px-4 h-full">
         <div className="flex flex-col-reverse lg:flex-row items-center h-full gap-8">
           
           {/* Text Content */}
           <div className="w-full lg:w-1/2 lg:p-10 lg:text-left">
-            <h1 className="text-3xl md:text-4xl lg:pl-16 lg:text-5xl text-blue-950 font-bold leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:pl-16 lg:text-5xl font-bold leading-tight">
               {t("We offer the best medical internship programmes abroad")} {/* Translation Key */}
             </h1>
             <p className="my-6 text-sm md:text-base lg:pl-16 lg:text-sm max-w-2xl mx-auto lg:mx-0">

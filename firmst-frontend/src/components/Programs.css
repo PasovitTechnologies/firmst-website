@@ -10,6 +10,7 @@
     font-size: 32px;
     font-weight: bold;
     color: #00295f;
+    
     margin-bottom: 40px;
   }
   
@@ -20,7 +21,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     background: white;
     border-radius: 10px;
