@@ -78,12 +78,12 @@ const RequestForm = () => {
 
         {/* Right Side: Form */}
         <div className="form-right">
-          <form onSubmit={handleSubmit} className="request-form">
+          <form onSubmit={handleSubmit} className="">
             {/* Name Field */}
             <div className="form-group">
-              <label>{t("requestForm.name")}</label>
               <input
                 type="text"
+                className="bg-white text-black placeholder-gray-700 border-none"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
@@ -94,9 +94,9 @@ const RequestForm = () => {
 
             {/* Contact Number Field with Country Code */}
             <div className="form-group">
-              <label>{t("requestForm.contact")}</label>
               <PhoneInput
                 country={"ru"}
+                className="bg-white text-black placeholder-gray-700 border-none"
                 value={formData.phone}
                 onChange={handlePhoneChange}
                 inputStyle={{
@@ -109,9 +109,10 @@ const RequestForm = () => {
 
             {/* Specialization of Interest */}
             <div className="form-group">
-              <label>{t("requestForm.specialization")}</label>
               <input
                 type="text"
+                className="bg-white text-black placeholder-gray-700 border-none"
+
                 name="specialization"
                 value={formData.specialization}
                 onChange={handleChange}
@@ -122,10 +123,11 @@ const RequestForm = () => {
 
             {/* Email Field */}
             <div className="form-group">
-              <label>{t("requestForm.email")}</label>
               <input
                 type="email"
                 name="email"
+                className="bg-white text-black placeholder-gray-700 border-none"
+
                 value={formData.email}
                 onChange={handleChange}
                 required

@@ -22,11 +22,11 @@
 
   "requestForm": {
     "heading": "Submit the request form to receive complimentary consultation now",
-    "description": "Fill out the form below and we’ll get back to you as soon as possible.",
-    "name": "Name",
-    "contact": "Contact Number",
-    "specialization": "Specialization of Interest",
-    "email": "Email",
+    "description": "Submit the request form to receive complimentary consultation now",
+    "name": "Name *",
+    "contact": "Contact Number *",
+    "specialization": "Specialization of Interest *",
+    "email": "Email *",
     "accept_terms": "I accept the",
     "terms_conditions": "terms and conditions",
     "submit": "Submit",
@@ -37,7 +37,7 @@
   },
 
   "feedbackVideo": {
-    "heading": "What Our Participants Say",
+    "heading": "Feedback Form Our Former Interns",
     "subheading": "You're welcome to network with our interns to learn further about us"
   },
 
@@ -87,6 +87,13 @@
         "points": [
           "DUNA MEDICAL CENTRE-BUDAPEST",
           "UNIVERSITY OF SZEGED-SZEGED"
+        ],
+        "image": "https://static.wixstatic.com/media/df6cc5_1ae2cac12c844e84b05678d8e07f3740~mv2.jpg"
+      },
+      {
+        "title": "SWITZERLAND",
+        "points": [
+          "NOLIER CLINIC-GENOLIER"
         ],
         "image": "https://static.wixstatic.com/media/df6cc5_1ae2cac12c844e84b05678d8e07f3740~mv2.jpg"
       }
