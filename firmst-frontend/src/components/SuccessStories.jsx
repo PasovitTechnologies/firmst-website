@@ -10,6 +10,7 @@ const SuccessStories = () => {
   const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(false);
 
+  console.log(isMobile)
   // Detect screen size
   useEffect(() => {
     const handleResize = () => {
@@ -29,15 +30,16 @@ const SuccessStories = () => {
       description: "Of Experience Organising Successful Medical Programmes",
       iconImage: arrow,
       bgColor: "rgb(201,188,253)",
-      height: "h-[260px] lg:h-[260px]"
+      height: "h-[260px] lg:h-[260px]",
     },
     {
       id: 2,
       header: "100+",
-      description: "Medical interns have been sent abroad and trained by renowned medical experts",
+      description:
+        "Medical interns have been sent abroad and trained by renowned medical experts",
       iconImage: star,
       bgColor: "#B6EEFE",
-      height: "h-[320px] lg:h-[320px]"
+      height: "h-[320px] lg:h-[320px]",
     },
     {
       id: 3,
@@ -45,8 +47,8 @@ const SuccessStories = () => {
       description: "Fast and guaranteed visa application services",
       iconImage: successPerson,
       bgColor: "#FED5B0",
-      height: "h-[400px] lg:h-[400px]"
-    }
+      height: "h-[400px] lg:h-[400px]",
+    },
   ];
 
   return (
@@ -54,34 +56,34 @@ const SuccessStories = () => {
       {/* Show this section on tablet & laptop (width ≥ 1024px) */}
       {!isMobile && (
         <section className="px-4 lg:px-14 py-8">
-        <h2 className="text-3xl font-bold mb-8 text-center lg:text-left">
-        {t("success_stories.heading").split(" ").slice(0, -1).join(" ")}{" "}
-        <span className="text-orange-500">
-          {t("success_stories.heading").split(" ").slice(-1)}
-        </span>
-      </h2>
-      
+          <h2 className="text-3xl font-bold mb-8 text-center lg:text-left">
+            {t("success_stories.heading").split(" ").slice(0, -1).join(" ")}{" "}
+            <span className="text-orange-500">
+              {t("success_stories.heading").split(" ").slice(-1)}
+            </span>
+          </h2>
+
           <div className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-8 lg:gap-5">
             {stories.map((story, index) => (
               <motion.div
                 key={story.id}
                 className={`w-full lg:w-[250px] ${story.height} rounded-t-[150px] flex flex-col items-center justify-center px-5 lg:px-8`}
                 style={{ backgroundColor: story.bgColor }}
-                initial={{ 
+                initial={{
                   opacity: 0,
                   y: 50,
-                  scale: 0.9
+                  scale: 0.9,
                 }}
-                whileInView={{ 
+                whileInView={{
                   opacity: 1,
                   y: 0,
-                  scale: 1
+                  scale: 1,
                 }}
                 viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.6, 
+                transition={{
+                  duration: 0.6,
                   delay: index * 0.2,
-                  ease: "easeOut"
+                  ease: "easeOut",
                 }}
               >
                 <h1 className="text-3xl lg:text-4xl font-bold mt-14 lg:mt-10">
@@ -90,13 +92,15 @@ const SuccessStories = () => {
                 <p className="text-sm font-semibold text-center w-full lg:w-52 mt-4">
                   {story.description}
                 </p>
-                <img 
-                  src={story.iconImage} 
-                  alt="" 
+                <img
+                  src={story.iconImage}
+                  alt=""
                   className={`mt-auto ${
-                    story.id === 1 ? 'h-[60px]' : 
-                    story.id === 2 ? 'h-[100px] object-cover' : 
-                    'w-56'
+                    story.id === 1
+                      ? "h-[60px]"
+                      : story.id === 2
+                      ? "h-[100px] object-cover"
+                      : "w-56"
                   }`}
                 />
               </motion.div>
@@ -114,33 +118,55 @@ const SuccessStories = () => {
 
           {/* First Card */}
           <div className="bg-[rgb(201,188,253)] w-[260px] h-[180px] rounded-r-[150px] relative">
-            <img src={arrow} alt="" className=" h-[25px]  absolute top-16 left-0" />
+            <img
+              src={arrow}
+              alt=""
+              className=" h-[25px]  absolute top-16 left-0"
+            />
             <div className="h-full flex flex-col justify-center ml-10">
-              <h1 className="text-4xl my-1 w-full px-4 font-bold">15+ Years</h1>
+              <h1 className="text-4xl my-1 w-full px-4 font-bold">
+                {t("15+ Years")}
+              </h1>
               <p className="w-44 font-semibold text-xs">
-                Medical interns have been sent abroad and trained by renowned medical experts
+                {t(
+                  "Medical interns have been sent abroad and trained by renowned medical experts"
+                )}
               </p>
             </div>
           </div>
 
           {/* Second Card */}
           <div className="bg-[#B6EEFE] w-[320px] h-[180px] rounded-r-[150px] relative">
-            <img src={star} alt="" className="h-[50px] absolute top-14 left-[-20px] rotate-90" />
+            <img
+              src={star}
+              alt=""
+              className="h-[50px] absolute top-14 left-[-20px] rotate-90"
+            />
             <div className="h-full flex flex-col justify-center">
-              <h1 className="text-4xl my-1  w-[70%] px-5 font-bold">100+</h1>
+              <h1 className="text-4xl my-1  w-[70%] px-5 font-bold">
+                {t("100+")}
+              </h1>
               <p className="w-44 font-semibold text-xs">
-                Medical interns have been sent abroad and trained by renowned medical experts
+                {t(
+                  "Medical interns have been sent abroad and trained by renowned medical experts"
+                )}
               </p>
             </div>
           </div>
 
           {/* Third Card */}
           <div className="bg-[#FED5B0] w-[360px] h-[200px] rounded-r-[150px] relative">
-            <img src={successPerson} alt="" className="h-[180px] absolute top-5 left-0 mb-4" />
+            <img
+              src={successPerson}
+              alt=""
+              className="h-[180px] absolute top-5 left-0 mb-4"
+            />
             <div className="h-full flex flex-col justify-center ml-24">
-              <h1 className="text-4xl my-1 font-bold  w-full px-8">100%</h1>
+              <h1 className="text-4xl my-1 font-bold  w-full px-8">
+                {t("100%")}
+              </h1>
               <p className="w-44 text-xs font-semibold">
-                Fast and guaranteed visa application services
+                {t("Fast and guaranteed visa application services")}
               </p>
             </div>
           </div>
