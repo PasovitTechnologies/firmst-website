@@ -135,6 +135,20 @@
     "title": "We offer the best medical intership programmes abroad",
     "button": "free consultation"
   },
+  "successStory": {
+    "sectionOne": {
+      "title": "15+ Years",
+      "description": "Of Experience Organising Successful Medical Programmes"
+    },
+    "sectionTwo": {
+      "title": "100+",
+      "description": "Medical interns have been sent abroad and trained by renowned medical experts"
+    },
+    "sectionThree": {
+      "title": "100%",
+      "description": "Fast and guaranteed visa application services"
+    }
+  },
   "dashboard": {
     "title": "User Dashboard",
     "searchPlaceholder": "🔍 Search by name, email, or phone",
