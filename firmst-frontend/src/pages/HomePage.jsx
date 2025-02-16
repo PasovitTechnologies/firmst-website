@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Navbar from '../components/Navbar'
 import HeroSection from '../components/HeroSection'
 import SuccessStories from '../components/SuccessStories'
@@ -8,15 +8,17 @@ import FeedbackVideo from '../components/FeedbackVideo'
 import RequestForm from '../components/RequestForm'
 
 const HomePage = () => {
+  const footerRef = useRef(null); // Define footerRef
+
   return (
     <div>
       <Navbar/>
-      <HeroSection/>
+      <HeroSection footerRef={footerRef}/>
       <SuccessStories/>
       <Programs/>
       <Process/>
       <FeedbackVideo/>
-      <RequestForm/>
+      <RequestForm footerRef={footerRef}/>
     </div>
   )
 }

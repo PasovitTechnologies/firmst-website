@@ -6,7 +6,7 @@ import "react-phone-input-2/lib/style.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./RequestForm.css";
 
-const RequestForm = () => {
+const RequestForm = ({footerRef}) => {
   const { t } = useTranslation(); // i18n hook
   const [formData, setFormData] = useState({
     name: "",
@@ -65,7 +65,7 @@ const RequestForm = () => {
   };
 
   return (
-    <section className="request-form-section" id="request-form-section">
+    <section className="request-form-section" id="request-form-section" ref={footerRef}>
       {/* Toast Container for notifications */}
       <ToastContainer />
 
@@ -161,7 +161,7 @@ const RequestForm = () => {
 
       <div className="footer-bottom">
         <hr className="footer-line" />
-        <p>&copy; 2024 EAFO. Все права защищены.</p>
+        <p>&copy; 2024 EAFO. Всеправазащищены.</p>
       </div>
     </section>
   );
