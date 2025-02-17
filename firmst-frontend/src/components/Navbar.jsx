@@ -16,20 +16,31 @@ const Navbar = () => {
 
   // Hide navbar on scroll down, show on stop or scroll up
   useEffect(() => {
+    let lastScroll = 0;
+  
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setShowNavbar(false);
-      } else {
+      const currentScrollY = window.scrollY;
+  
+      if (currentScrollY < lastScroll - 10) {
+        // Show navbar when scrolling up significantly
         setShowNavbar(true);
+      } else if (currentScrollY > lastScroll + 10) {
+        // Hide navbar when scrolling down significantly
+        setShowNavbar(false);
       }
-      setLastScrollY(window.scrollY);
+  
+      lastScroll = currentScrollY;
     };
-
+  
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
-
-  const handleScrollToSection = (sectionId) => {
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+  const 
+  handleScrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -52,24 +63,25 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links - Centered */}
-        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <ul className={`nav-links ${menuOpen ? "open" : ""} tracking-wider`}>
           <li>
             <a onClick={() => handleScrollToSection("hero-section")}>
-              {t("home")}
+              {t("Home")}
             </a>
           </li>
           <li>
             <a onClick={() => handleScrollToSection("programs-section")}>
-              {t("services")}
+              {t("Services")}
             </a>
           </li>
           <li>
-            <a onClick={() => handleScrollToSection("feedback-section")}>{t("reviews")}</a>
+            <a onClick={() => handleScrollToSection("feedback-section")}>{t("Reviews")}</a>
           </li>
           <li>
-            <a onClick={() => handleScrollToSection("home")}>{t("about")}</a>
+            <a onClick={() => handleScrollToSection("home")}>{t("About")}</a>
           </li>
-        </ul>
+    <p className="mt-auto text-white text-xs">{t("copyright.title")}</p>
+          </ul>
 
         {/* Actions (Contact & Language Select) */}
         <div className="actions">
@@ -83,6 +95,7 @@ const Navbar = () => {
             </select>
           </div>
         </div>
+
 
         {/* Mobile Menu Toggle */}
         <button

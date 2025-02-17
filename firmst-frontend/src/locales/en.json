@@ -33,7 +33,6 @@
     "success_message": "Form submitted successfully!",
     "error_message": "Failed to submit the form. Please try again.",
     "network_error_message": "Network error! Please check your connection."
-
   },
 
   "feedbackVideo": {
@@ -92,14 +91,14 @@
       },
       {
         "title": "SWITZERLAND",
-        "points": [
-          "NOLIER CLINIC-GENOLIER"
-        ],
+        "points": ["NOLIER CLINIC-GENOLIER"],
         "image": "https://static.wixstatic.com/media/df6cc5_1ae2cac12c844e84b05678d8e07f3740~mv2.jpg"
       }
     ]
   },
-
+  "copyright":{
+    "title":"© 2025 FIRMST. All rights reserved."
+  },
   "LoginPage": {
     "title": "Admin Login",
     "emailLabel": "Email Address:",
@@ -112,8 +111,7 @@
     "loginFailed": "An error occurred. Please try again."
   },
 
-
-    "userDetails": {
+  "userDetails": {
     "header": "User Details",
     "userInformation": "User Information",
     "name": "Name",
@@ -135,8 +133,25 @@
     "deleteSuccess": "User deleted successfully!",
     "deleteFail": "Failed to delete user."
   },
-
-
+  "homepage": {
+    "title": "We offer the best medical intership programmes abroad",
+    "button": "free consultation"
+  },
+  "successStory": {
+    "title": "Our Success Stories",
+    "sectionOne": {
+      "title": "15+ Years",
+      "description": "Of Experience Organising Successful Medical Programmes"
+    },
+    "sectionTwo": {
+      "title": "100+",
+      "description": "Medical interns have been sent abroad and trained by renowned medical experts"
+    },
+    "sectionThree": {
+      "title": "100%",
+      "description": "Fast and guaranteed visa application services"
+    }
+  },
   "dashboard": {
     "title": "User Dashboard",
     "searchPlaceholder": "🔍 Search by name, email, or phone",
@@ -147,5 +162,4 @@
     "status": "Status",
     "noUsers": "No users found or failed to load users."
   }
-  
 }

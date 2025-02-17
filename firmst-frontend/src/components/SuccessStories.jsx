@@ -10,7 +10,7 @@ const SuccessStories = () => {
   const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(false);
 
-  console.log(isMobile)
+  console.log(isMobile);
   // Detect screen size
   useEffect(() => {
     const handleResize = () => {
@@ -26,25 +26,24 @@ const SuccessStories = () => {
   const stories = [
     {
       id: 1,
-      header: "15+ Years",
-      description: "Of Experience Organising Successful Medical Programmes",
+      header: t("successStory.sectionOne.title"),
+      description: t("successStory.sectionOne.description"),
       iconImage: arrow,
       bgColor: "rgb(201,188,253)",
       height: "h-[260px] lg:h-[260px]",
     },
     {
       id: 2,
-      header: "100+",
-      description:
-        "Medical interns have been sent abroad and trained by renowned medical experts",
+      header: t("successStory.sectionTwo.title"),
+      description: t("successStory.sectionTwo.description"),
       iconImage: star,
       bgColor: "#B6EEFE",
       height: "h-[320px] lg:h-[320px]",
     },
     {
       id: 3,
-      header: "100%",
-      description: "Fast and guaranteed visa application services",
+      header: t("successStory.sectionThree.title"),
+      description: t("successStory.sectionThree.description"),
       iconImage: successPerson,
       bgColor: "#FED5B0",
       height: "h-[400px] lg:h-[400px]",
@@ -56,10 +55,10 @@ const SuccessStories = () => {
       {/* Show this section on tablet & laptop (width ≥ 1024px) */}
       {!isMobile && (
         <section className="px-4 lg:px-14 py-8">
-          <h2 className="text-3xl font-bold mb-8 text-center lg:text-left">
-            {t("success_stories.heading").split(" ").slice(0, -1).join(" ")}{" "}
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            {t("successStory.title").split(" ").slice(0, -1).join(" ")}{" "}
             <span className="text-orange-500">
-              {t("success_stories.heading").split(" ").slice(-1)}
+              {t("successStory.title").split(" ").slice(-1)}
             </span>
           </h2>
 
