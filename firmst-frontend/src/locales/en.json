@@ -96,7 +96,9 @@
       }
     ]
   },
-
+  "copyright":{
+    "title":"© 2025 FIRMST. All rights reserved."
+  },
   "LoginPage": {
     "title": "Admin Login",
     "emailLabel": "Email Address:",
@@ -136,6 +138,7 @@
     "button": "free consultation"
   },
   "successStory": {
+    "title": "Our Success Stories",
     "sectionOne": {
       "title": "15+ Years",
       "description": "Of Experience Organising Successful Medical Programmes"

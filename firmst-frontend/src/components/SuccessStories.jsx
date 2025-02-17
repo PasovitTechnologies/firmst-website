@@ -55,10 +55,10 @@ const SuccessStories = () => {
       {/* Show this section on tablet & laptop (width ≥ 1024px) */}
       {!isMobile && (
         <section className="px-4 lg:px-14 py-8">
-          <h2 className="text-3xl font-bold mb-8 text-center lg:text-left">
-            {t("success_stories.heading").split(" ").slice(0, -1).join(" ")}{" "}
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            {t("successStory.title").split(" ").slice(0, -1).join(" ")}{" "}
             <span className="text-orange-500">
-              {t("success_stories.heading").split(" ").slice(-1)}
+              {t("successStory.title").split(" ").slice(-1)}
             </span>
           </h2>
 

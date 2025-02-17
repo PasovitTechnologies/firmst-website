@@ -161,7 +161,7 @@ const RequestForm = ({footerRef}) => {
 
       <div className="footer-bottom">
         <hr className="footer-line" />
-        <p>&copy; 2024 EAFO. Всеправазащищены.</p>
+        <p>{t("copyright")}</p>
       </div>
     </section>
   );
