@@ -3,12 +3,14 @@ import { useTranslation } from "react-i18next";
 import "../utils/i18n";
 import "./Navbar.css";
 import { FaPhoneAlt } from "react-icons/fa";
-
+import HomeIcon from "@mui/icons-material/Home";
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import StarIcon from '@mui/icons-material/Star';
+import FlagCircleIcon from '@mui/icons-material/FlagCircle';
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -17,10 +19,10 @@ const Navbar = () => {
   // Hide navbar on scroll down, show on stop or scroll up
   useEffect(() => {
     let lastScroll = 0;
-  
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-  
+
       if (currentScrollY < lastScroll - 10) {
         // Show navbar when scrolling up significantly
         setShowNavbar(true);
@@ -28,19 +30,18 @@ const Navbar = () => {
         // Hide navbar when scrolling down significantly
         setShowNavbar(false);
       }
-  
+
       lastScroll = currentScrollY;
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
-  const 
-  handleScrollToSection = (sectionId) => {
+
+  const handleScrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -66,22 +67,30 @@ const Navbar = () => {
         <ul className={`nav-links ${menuOpen ? "open" : ""} tracking-wider`}>
           <li>
             <a onClick={() => handleScrollToSection("hero-section")}>
+              <HomeIcon className="mb-2 mr-1" />
               {t("Home")}
             </a>
           </li>
           <li>
             <a onClick={() => handleScrollToSection("programs-section")}>
+              <BookmarkBorderIcon className="mb-2 mr-1" />
               {t("Services")}
             </a>
           </li>
           <li>
-            <a onClick={() => handleScrollToSection("feedback-section")}>{t("Reviews")}</a>
+            <a onClick={() => handleScrollToSection("feedback-section")}>
+              <StarIcon className="mb-2 mr-1" />
+              {t("Reviews")}
+            </a>
           </li>
           <li>
-            <a onClick={() => handleScrollToSection("home")}>{t("About")}</a>
+            <a onClick={() => handleScrollToSection("home")}>
+              <FlagCircleIcon className="mb-2 mr-1" />
+              {t("About")}
+            </a>
           </li>
-    <p className="mt-auto text-white text-xs">{t("copyright.title")}</p>
-          </ul>
+          <p className="mt-auto text-white text-xs">{t("copyright.title")}</p>
+        </ul>
 
         {/* Actions (Contact & Language Select) */}
         <div className="actions">
@@ -95,7 +104,6 @@ const Navbar = () => {
             </select>
           </div>
         </div>
-
 
         {/* Mobile Menu Toggle */}
         <button

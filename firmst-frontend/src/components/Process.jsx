@@ -2,13 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "./Process.css";
-
+import backgroungImage from "../../public/background.png"
 const Process = () => {
   const { t } = useTranslation();
   const steps = t("process.steps", { returnObjects: true });
 
   return (
-    <section className="w-full">
+    <section className="w-full lg:bg-cover bg-center py-2 bg-no-repeat" style={{
+      backgroundImage: `url(${backgroungImage})`
+    }}>
       <div className="text-center pl-5 lg:pl-10">
         <h2 className="text-4xl font-bold text-[#00295F]">{t("process.heading")}</h2>
         <p className="text-xl text-orange-500">{t("process.subheading")}</p>
