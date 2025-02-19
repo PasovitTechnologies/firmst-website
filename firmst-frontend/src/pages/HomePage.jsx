@@ -40,7 +40,7 @@ const HomePage = () => {
       {showScroll && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-15 right-15 bg-[#00295f] text-white p-3 rounded-full shadow-md hover:bg-blue-700 transition-all"
+          className="fixed bottom-15 right-5 bg-[#00295f] text-white p-3 rounded-full shadow-md hover:bg-blue-700 transition-all"
           style={{ zIndex: 1000 }}
         >
           <FaArrowUp size={20} />
