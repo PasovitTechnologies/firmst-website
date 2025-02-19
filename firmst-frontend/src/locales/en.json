@@ -79,7 +79,7 @@
           "TATA MEDICAL CENTRE-CALCUTTA",
           "CACHAR CANCER CENTRE-SILCHAR, ASSAM"
         ],
-        "image": "https://static.wixstatic.com/media/df6cc5_94c995f2df1449eaa6e87d1fd3dcdfb9~mv2.jpg"
+        "image": "https://static.wixstatic.com/media/df6cc5_03d2bb04cb16409e9817d754772ee1ef~mv2.png"
       },
       {
         "title": "HUNGARY",
@@ -87,12 +87,12 @@
           "DUNA MEDICAL CENTRE-BUDAPEST",
           "UNIVERSITY OF SZEGED-SZEGED"
         ],
-        "image": "https://static.wixstatic.com/media/df6cc5_1ae2cac12c844e84b05678d8e07f3740~mv2.jpg"
+        "image": "https://static.wixstatic.com/media/df6cc5_8bfe6899c84a441fa36a86d4bd3f37fb~mv2.png"
       },
       {
         "title": "SWITZERLAND",
-        "points": ["NOLIER CLINIC-GENOLIER"],
-        "image": "https://static.wixstatic.com/media/df6cc5_1ae2cac12c844e84b05678d8e07f3740~mv2.jpg"
+        "points": ["GENOLIER CLINIC-GENOLIER"],
+        "image": "https://static.wixstatic.com/media/df6cc5_dad03a1661514812b69afad8773a5ea9~mv2.png"
       }
     ]
   },

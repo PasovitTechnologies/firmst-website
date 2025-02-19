@@ -4,7 +4,7 @@ import "./HeroSection.css";
 import herosectionImage from "../../public/herosection.png";
 
 const HeroSection = ({ footerRef }) => {
-  const { t } = useTranslation(); // Initialize translation hook
+  const { t } = useTranslation();
 
   const scrollToFooter = () => {
     footerRef.current?.scrollIntoView({ behavior: "smooth" });
