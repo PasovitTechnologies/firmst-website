@@ -108,7 +108,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className={`menu-toggle`}
+          className={`menu-toggle lg:hidden`}
           onClick={() => setMenuOpen(!menuOpen)}
         >
         {menuOpen ? <Close style={{ color: "white" }} /> : <Menu style={{ color: "#00295f" }} />}
