@@ -20,14 +20,14 @@ const HeroSection = ({ footerRef }) => {
                 {t("homepage.title")}
               </h1>
               <p className="my-6 text-sm lg:text-sm max-w-2xl lg:mx-0">
-                {t("We help make your dream come true: we select study programs, scholarships and grants, and provide support at all stages of admission to the best universities in the world.")}
+                {t("homepage.description")}
               </p>
               <div>
                 <button 
                   onClick={scrollToFooter} 
                   className="px-6 py-3 rounded-md text-sm text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-300 shadow-md"
                 >
-                  {t("FREE CONSULTATION")}
+                  {t("homepage.button")}
                 </button>
               </div>
             </div>

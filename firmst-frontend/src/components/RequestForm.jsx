@@ -161,7 +161,7 @@ const RequestForm = ({footerRef}) => {
 
       <div className="footer-bottom">
         <hr className="footer-line" />
-        <p>{t("copyright")}</p>
+        <p>{t("copyright.title")}</p>
       </div>
     </section>
   );

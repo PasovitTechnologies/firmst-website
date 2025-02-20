@@ -96,8 +96,8 @@
       }
     ]
   },
-  "copyright":{
-    "title":"© 2025 FIRMST. All rights reserved."
+  "copyright": {
+    "title": "© 2025 FIRMST. All rights reserved."
   },
   "LoginPage": {
     "title": "Admin Login",
@@ -135,6 +135,7 @@
   },
   "homepage": {
     "title": "We offer the best medical intership programmes abroad",
+    "description": "We help make your dream come true: we select study programs, scholarships and grants, and provide support at all stages of admission to the best universities in the world.",
     "button": "free consultation"
   },
   "successStory": {
@@ -151,6 +152,12 @@
       "title": "100%",
       "description": "Fast and guaranteed visa application services"
     }
+  },
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "reviews": "Reviews",
+    "about": "About"
   },
   "dashboard": {
     "title": "User Dashboard",

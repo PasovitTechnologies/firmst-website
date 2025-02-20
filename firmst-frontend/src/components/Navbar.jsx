@@ -68,25 +68,25 @@ const Navbar = () => {
           <li>
             <a onClick={() => handleScrollToSection("hero-section")}>
               <HomeIcon className="mb-2 mr-1" />
-              {t("Home")}
+              {t("navbar.home")}
             </a>
           </li>
           <li>
             <a onClick={() => handleScrollToSection("programs-section")}>
               <BookmarkBorderIcon className="mb-2 mr-1" />
-              {t("Services")}
+              {t("navbar.services")}
             </a>
           </li>
           <li>
             <a onClick={() => handleScrollToSection("feedback-section")}>
               <StarIcon className="mb-2 mr-1" />
-              {t("Reviews")}
+              {t("navbar.reviews")}
             </a>
           </li>
           <li>
             <a onClick={() => handleScrollToSection("home")}>
               <FlagCircleIcon className="mb-2 mr-1" />
-              {t("About")}
+              {t("navbar.about")}
             </a>
           </li>
           <p className="mt-auto text-white text-xs">{t("copyright.title")}</p>
