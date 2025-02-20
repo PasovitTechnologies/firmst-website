@@ -5,8 +5,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-phone-input-2/lib/style.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./RequestForm.css";
+import { WhatsApp, Telegram, Instagram } from "@mui/icons-material";
 
-const RequestForm = ({footerRef}) => {
+// eslint-disable-next-line react/prop-types
+const RequestForm = ({ footerRef }) => {
   const { t } = useTranslation(); // i18n hook
   const [formData, setFormData] = useState({
     name: "",
@@ -32,17 +34,22 @@ const RequestForm = ({footerRef}) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/firmst-form/submit-form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "http://localhost:5000/api/firmst-form/submit-form",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
-        toast.success(t("requestForm.success_message"), { position: "top-center" });
+        toast.success(t("requestForm.success_message"), {
+          position: "top-center",
+        });
         console.log(data.message); // Handle success response
 
         // Clear the form data after successful submission
@@ -60,15 +67,20 @@ const RequestForm = ({footerRef}) => {
       }
     } catch (err) {
       console.error("Error submitting the form:", err);
-      toast.error(t("requestForm.network_error_message"), { position: "top-center" });
+      toast.error(t("requestForm.network_error_message"), {
+        position: "top-center",
+      });
     }
   };
 
   return (
-    <section className="request-form-section" id="request-form-section" ref={footerRef}>
+    <section
+      className="request-form-section"
+      id="request-form-section"
+      ref={footerRef}
+    >
       {/* Toast Container for notifications */}
       <ToastContainer />
-
       <div className="form-container">
         {/* Left Side */}
         <div className="form-left">
@@ -112,7 +124,6 @@ const RequestForm = ({footerRef}) => {
               <input
                 type="text"
                 className="bg-white text-black placeholder-gray-700 border-none"
-
                 name="specialization"
                 value={formData.specialization}
                 onChange={handleChange}
@@ -127,7 +138,6 @@ const RequestForm = ({footerRef}) => {
                 type="email"
                 name="email"
                 className="bg-white text-black placeholder-gray-700 border-none"
-
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -157,8 +167,54 @@ const RequestForm = ({footerRef}) => {
             </button>
           </form>
         </div>
+      </div>{" "}
+      <div className="footer-bottom">
+        <hr className="footer-line" />
       </div>
+      <div className="flex items-center justify-between w-full py-5 px-20">
+        <div className="text-white text-md">
+          <h1 className="text-lg font-semibold">{t("address.title")}</h1>
+          <p>{t("address.descriptionOne")}</p>
+          <p>{t("address.descriptionTwo")}</p>
+        </div>
 
+        <div className="flex space-x-4 items-center">
+          <h1 className="text-white text-3xl font-semibold">+7 999 999 000</h1>
+
+          <a
+            href="https://wa.me/your-number"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <WhatsApp
+              className="text-orange-500 border-2 border-orange-500 p-1 rounded-full hover:bg-orange-500 hover:text-white transition duration-300"
+              fontSize="large"
+            />
+          </a>
+
+          <a
+            href="https://t.me/your-username"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Telegram
+              className="text-orange-500 border-2 border-orange-500 p-1 rounded-full hover:bg-orange-500 hover:text-white transition duration-300"
+              fontSize="large"
+            />
+          </a>
+
+          <a
+            href="https://instagram.com/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram
+              className="text-orange-500 border-2 border-orange-500 p-1 rounded-full hover:bg-orange-500 hover:text-white transition duration-300"
+              fontSize="large"
+            />
+          </a>
+        </div>
+      </div>
       <div className="footer-bottom">
         <hr className="footer-line" />
         <p>{t("copyright.title")}</p>

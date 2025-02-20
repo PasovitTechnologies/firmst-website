@@ -11,7 +11,7 @@ const HeroSection = ({ footerRef }) => {
   };
 
   return (
-    <div className="mt-[100px] min-h-[80vh] w-full overflow-x-hidden text-[#00295F]">
+    <div className="mt-[100px] min-h-[80vh] w-full overflow-x-hidden text-[#00295F]" id="hero-section">
       <div className="container mx-auto px-4 h-full">
         <div className="flex flex-col-reverse lg:flex-row items-center h-full gap-8">
           <div className="w-full lg:w-1/2 lg:p-10 lg:text-left">
@@ -19,13 +19,13 @@ const HeroSection = ({ footerRef }) => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 {t("homepage.title")}
               </h1>
-              <p className="my-6 text-sm lg:text-sm max-w-2xl lg:mx-0">
+              {/*<p className="my-6 text-sm lg:text-sm max-w-2xl lg:mx-0">
                 {t("homepage.description")}
-              </p>
+              </p>*/}
               <div>
                 <button 
                   onClick={scrollToFooter} 
-                  className="px-6 py-3 rounded-md text-sm text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-300 shadow-md"
+                  className="px-6 py-3 my-4 rounded-md text-sm text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-300 shadow-md"
                 >
                   {t("homepage.button")}
                 </button>

@@ -54,7 +54,7 @@ const SuccessStories = () => {
     <>
       {/* Show this section on tablet & laptop (width ≥ 1024px) */}
       {!isMobile && (
-        <section className="px-4 lg:px-14 py-8">
+        <section className="px-4 lg:px-14 py-8" id="home">
           <h2 className="text-3xl font-bold mb-8 text-center">
             {t("successStory.title").split(" ").slice(0, -1).join(" ")}{" "}
             <span className="text-orange-500">
@@ -110,7 +110,7 @@ const SuccessStories = () => {
 
       {/* Show this section only on mobile (width < 1024px) */}
       {isMobile && (
-        <section className="px-4 py-8">
+        <section className="px-4 py-8" id="home">
           <h2 className="text-3xl font-bold mb-8 text-center">
             {t("success_stories.heading")}
           </h2>

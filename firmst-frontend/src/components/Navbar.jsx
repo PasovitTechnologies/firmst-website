@@ -6,6 +6,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import HomeIcon from "@mui/icons-material/Home";
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import StarIcon from '@mui/icons-material/Star';
+import { Menu, Close } from "@mui/icons-material";
 import FlagCircleIcon from '@mui/icons-material/FlagCircle';
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -75,7 +76,7 @@ const Navbar = () => {
             <a onClick={() => handleScrollToSection("programs-section")}>
               <BookmarkBorderIcon className="mb-2 mr-1" />
               {t("navbar.services")}
-            </a>
+            </a> 
           </li>
           <li>
             <a onClick={() => handleScrollToSection("feedback-section")}>
@@ -107,12 +108,11 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className={`menu-toggle ${menuOpen ? "open" : ""}`}
+          className={`menu-toggle`}
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span className="menu-line"></span>
-          <span className="menu-line"></span>
-          <span className="menu-line"></span>
+        {menuOpen ? <Close style={{ color: "white" }} /> : <Menu style={{ color: "#00295f" }} />}
+
         </button>
       </div>
     </nav>
