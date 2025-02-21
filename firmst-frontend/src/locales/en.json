@@ -27,12 +27,13 @@
     "contact": "Contact Number *",
     "specialization": "Specialization of Interest *",
     "email": "Email *",
-    "accept_terms": "I accept the",
-    "terms_conditions": "terms and conditions",
+    "accept_terms": "I agree",
+    "terms_conditions": "",
     "submit": "Submit",
     "success_message": "Form submitted successfully!",
     "error_message": "Failed to submit the form. Please try again.",
-    "network_error_message": "Network error! Please check your connection."
+    "network_error_message": "Network error! Please check your connection.",
+    "content": "Your personal data is collected and processed in accordance with the Rules of the EU Parliament and Council of April 27, 2016 No. 2016/679, namely: “Regulations on the protection of individuals regarding the processing of their personal data and free movement of such data”, as well as on the basis of the repeal of Directive 95/46 / WE (general data protection rules), i.e. only on the basis of the consent of the owner of such data."
   },
 
   "feedbackVideo": {
