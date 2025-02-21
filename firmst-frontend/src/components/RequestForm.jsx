@@ -145,6 +145,12 @@ const RequestForm = ({ footerRef }) => {
               />
             </div>
 
+            <div>
+              <p className="text-xs mb-3 text-gray-400">
+              {t("requestForm.content")}
+              </p>
+            </div>
+
             {/* Terms and Conditions Checkbox */}
             <div className="form-group checkbox-group">
               <input
@@ -168,17 +174,70 @@ const RequestForm = ({ footerRef }) => {
           </form>
         </div>
       </div>{" "}
+      <div
+        className="w-full px-3 lg:px-20"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent:"space-between",
+        }}
+      >
+        <div className="text-white text-xs md:text-md p-1">
+          <p className="lg:text-lg">{t("address.title")}</p>
+          <p>{t("address.descriptionOne")}</p>
+          <p>{t("address.descriptionTwo")}</p>
+        </div>
+        <div style={{
+          display:"flex",
+          alignItems:"center"
+        }}>
+          <h1 className="text-white text-sm lg:text-lg lg:mr-2 mt-1 font-semibold">+7 999 999 000</h1>
+          <div>
+            <a
+              href="https://wa.me/your-number"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsApp className="text-orange-500 ml-1 lg:mx-1 border-0 md:border-1 lg:p-1 border-orange-500 rounded-full hover:bg-orange-500 hover:text-white transition duration-300 text-md md:text-3xl" />
+            </a>
+
+            <a
+              href="https://t.me/your-username"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Telegram className="text-orange-500 ml-1 lg:mx-1 border-0 md:border-1 lg:p-1 border-orange-500 rounded-full hover:bg-orange-500 hover:text-white transition duration-300 text-md md:text-3xl" />
+            </a>
+
+            <a
+              href="https://instagram.com/your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="text-orange-500 ml-1 lg:mx-1 border-0 md:border-1 lg:p-1 border-orange-500 rounded-full hover:bg-orange-500 hover:text-white transition duration-300 text-md md:text-3xl" />
+            </a>
+            </div>
+        </div>
+      </div>
       <div className="footer-bottom">
         <hr className="footer-line" />
+        <p>{t("copyright.title")}</p>
       </div>
-      <div className="flex items-center justify-between w-full py-5 px-20">
+    </section>
+  );
+};
+
+export default RequestForm;
+
+/*
+      <div className="flex ">
         <div className="text-white text-md">
           <h1 className="text-lg font-semibold">{t("address.title")}</h1>
           <p>{t("address.descriptionOne")}</p>
           <p>{t("address.descriptionTwo")}</p>
         </div>
 
-        <div className="flex space-x-4 items-center">
+        <div className=" items-center">
           <h1 className="text-white text-3xl font-semibold">+7 999 999 000</h1>
 
           <a
@@ -215,12 +274,4 @@ const RequestForm = ({ footerRef }) => {
           </a>
         </div>
       </div>
-      <div className="footer-bottom">
-        <hr className="footer-line" />
-        <p>{t("copyright.title")}</p>
-      </div>
-    </section>
-  );
-};
-
-export default RequestForm;
+*/

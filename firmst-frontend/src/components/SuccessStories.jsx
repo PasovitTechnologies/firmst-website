@@ -124,12 +124,10 @@ const SuccessStories = () => {
             />
             <div className="h-full flex flex-col justify-center ml-10">
               <h1 className="text-4xl my-1 w-full px-4 font-bold">
-                {t("15+ Years")}
+                {t("successStory.sectionOne.title")}
               </h1>
               <p className="w-44 font-semibold text-xs">
-                {t(
-                  "Medical interns have been sent abroad and trained by renowned medical experts"
-                )}
+                {t("successStory.sectionOne.description")}
               </p>
             </div>
           </div>
@@ -143,12 +141,10 @@ const SuccessStories = () => {
             />
             <div className="h-full flex flex-col justify-center">
               <h1 className="text-4xl my-1  w-[70%] px-5 font-bold">
-                {t("100+")}
+                {t("successStory.sectionTwo.title")}
               </h1>
               <p className="w-44 font-semibold text-xs">
-                {t(
-                  "Medical interns have been sent abroad and trained by renowned medical experts"
-                )}
+              {t("successStory.sectionTwo.description")}
               </p>
             </div>
           </div>
@@ -162,10 +158,10 @@ const SuccessStories = () => {
             />
             <div className="h-full flex flex-col justify-center ml-24">
               <h1 className="text-4xl my-1 font-bold  w-full px-8">
-                {t("100%")}
+              {t("successStory.sectionThree.title")}
               </h1>
               <p className="w-44 text-xs font-semibold">
-                {t("Fast and guaranteed visa application services")}
+              {t("successStory.sectionThree.description")}
               </p>
             </div>
           </div>
