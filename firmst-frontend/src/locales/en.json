@@ -40,6 +40,11 @@
     "subheading": "You're welcome to network with our interns to learn further about us"
   },
 
+  "address":{
+    "title" : "Volokolomskoe Shosse,",
+    "descriptionOne":" 1c1 Office 606C,",
+    "descriptionTwo":"Moscow, Russia, 125080"
+  },
   "process": {
     "heading": "HOW DO WE WORK",
     "subheading": "Easy To Join",
